@@ -170,7 +170,9 @@ main {
   max-height: 30vh;
   margin-bottom: 3rem;
   @media (max-width: 767px) {
-    width: 75vw;
+    width: 70vw;
+    max-width: none;
+    max-height: none;
     margin-bottom: 2rem;
   }
 }
