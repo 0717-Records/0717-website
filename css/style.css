@@ -166,9 +166,9 @@ main {
 
 .hero .logo-large {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  width: 25vw;
   max-width: 34.5rem;
-  margin-bottom: 4rem;
+  max-height: 30vh;
+  margin-bottom: 3rem;
   @media (max-width: 767px) {
     width: 75vw;
     margin-bottom: 2rem;
@@ -203,8 +203,8 @@ main {
 }
 
 .hero .socials-wrapper {
-  margin-bottom: 4rem;
-  width: 23rem;
+  margin-bottom: 3rem;
+  width: 20rem;
   display: flex;
   justify-content: space-between;
   @media (max-width: 767px) {
@@ -214,8 +214,8 @@ main {
 }
 
 .hero .socials-wrapper .social-item {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   @media (max-width: 767px) {
     width: 3rem;
     height: 3rem;
