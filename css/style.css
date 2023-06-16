@@ -163,15 +163,15 @@ main {
   margin-bottom: 4rem;
   @media (max-width: 767px) {
     width: 75vw;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
 .hero .welcome,
 .hero .info {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   @media (max-width: 767px) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -201,6 +201,7 @@ main {
   justify-content: space-between;
   @media (max-width: 767px) {
     width: 13rem;
+    margin-bottom: 2rem;
   }
 }
 
