@@ -20,5 +20,8 @@ for (const button of copyToClipboardButtons) {
 
     // Remove the textarea from the HTML document
     document.body.removeChild(textarea);
+
+    // Change button text
+    button.querySelector('.button-text').textContent = 'Copied!';
   });
 }
