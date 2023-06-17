@@ -168,7 +168,10 @@ button:active {
   display: flex;
   width: 100%;
   border-bottom: solid 0.5px rgba(0, 0, 0, 0.4);
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
+  @media (max-width: 767px) {
+    margin-bottom: 2rem;
+  }
 }
 
 .tabbed-content .tab-nav .tab-nav-item {
@@ -255,7 +258,10 @@ section h2 {
 }
 
 section .section--subheading {
-  margin: 0 0.5rem;
+  margin: 0 auto;
+  @media (max-width: 767px) {
+    max-width: 60vw;
+  }
 }
 
 /* HERO */
@@ -287,8 +293,9 @@ section .section--subheading {
 
 /* ESCAPE */
 
-.section--escape .tab-body-item {
-  margin-top: 5rem;
+.section--escape .artists-wrapper {
+  margin-top: 3rem;
+
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -296,8 +303,8 @@ section .section--subheading {
   row-gap: 2.5rem;
   max-width: 56rem;
   @media (max-width: 767px) {
-    column-gap: 0;
     margin-top: 2rem;
+    column-gap: 0;
     row-gap: 2rem;
   }
 }
