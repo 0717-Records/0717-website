@@ -47,6 +47,7 @@ const initialiseTabs = () => {
         tabHeader.classList.add('selected');
         for (const tab of tabs) {
           tab.classList.remove('active');
+          tab.classList.remove('animate');
         }
         const tab = tabBlock.querySelector(`[data-tab-id="${tabRef}"]`);
         if (tab) {
