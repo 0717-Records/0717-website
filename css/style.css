@@ -162,6 +162,47 @@ button:active {
   margin-right: 0.5rem;
 }
 
+/* TABBED CONTENT */
+
+.tabbed-content .tab-nav {
+  display: flex;
+  width: 100%;
+  border-bottom: solid 0.5px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1.5rem;
+}
+
+.tabbed-content .tab-nav .tab-nav-item {
+  width: 50%;
+}
+
+.tabbed-content .tab-nav .tab-nav-item h3 {
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  border-bottom: solid transparent 3px;
+  font-weight: 300;
+}
+.tabbed-content .tab-nav .tab-nav-item:hover h3 {
+  border-bottom: solid var(--primary-yellow-dim) 3px;
+}
+
+.tabbed-content .tab-nav .tab-nav-item:first-child {
+  text-align: right;
+  margin-right: 2rem;
+}
+.tabbed-content .tab-nav .tab-nav-item:last-child {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.tabbed-content .tab-nav .tab-nav-item.selected h3 {
+  border-bottom: solid var(--primary-yellow-dark) 3px;
+  font-weight: 600;
+}
+
+.tabbed-content .tab-body .tab-body-item:not(.active) {
+  display: none;
+}
+
 /* MAIN STYLES */
 
 section {
@@ -217,42 +258,7 @@ section h2 {
 
 /* ESCAPE */
 
-.section--escape .tab-nav {
-  display: flex;
-  width: 100%;
-  border-bottom: solid 0.5px rgba(0, 0, 0, 0.4);
-  margin-bottom: 1.5rem;
-}
-
-.section--escape .tab-nav .tab-nav-item {
-  width: 50%;
-}
-
-.section--escape .tab-nav .tab-nav-item h3 {
-  display: inline-block;
-  padding-bottom: 0.25rem;
-  border-bottom: solid transparent 3px;
-  font-weight: 300;
-}
-.section--escape .tab-nav .tab-nav-item:hover h3 {
-  border-bottom: solid var(--primary-yellow-dim) 3px;
-}
-
-.section--escape .tab-nav .tab-nav-item:first-child {
-  text-align: right;
-  margin-right: 2rem;
-}
-.section--escape .tab-nav .tab-nav-item:last-child {
-  text-align: left;
-  margin-left: 2rem;
-}
-
-.section--escape .tab-nav .tab-nav-item.selected h3 {
-  border-bottom: solid var(--primary-yellow-dark) 3px;
-  font-weight: 600;
-}
-
-.section--escape .artist-container {
+.section--escape .tab-body-item {
   margin-top: 5rem;
   display: flex;
   justify-content: center;
@@ -288,6 +294,7 @@ section h2 {
   overflow: hidden;
   border-radius: 50%;
   margin-bottom: 1rem;
+  position: relative;
   @media (max-width: 767px) {
     max-width: 8rem;
     max-height: 8rem;
@@ -296,8 +303,12 @@ section h2 {
 }
 
 .section--escape .artist-img-frame img {
-  max-width: 100%;
-  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
 }
 
 .section--escape .artist-block h4 {

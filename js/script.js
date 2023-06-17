@@ -25,3 +25,40 @@ for (const button of copyToClipboardButtons) {
     button.querySelector('.button-text').textContent = 'Copied!';
   });
 }
+
+// ESCAPE - tab logic
+
+const initialiseTabs = () => {
+  const tabbedContent = document.querySelectorAll('.tabbed-content');
+
+  for (const tabBlock of tabbedContent) {
+    const tabHeaders = tabBlock.querySelectorAll('[data-tab-ref]');
+    const tabs = tabBlock.querySelectorAll('[data-tab-id]');
+
+    if (tabHeaders.length === 0) return;
+    if (tabs.length === 0) return;
+
+    for (const tabHeader of tabHeaders) {
+      const tabRef = tabHeader.dataset.tabRef;
+      tabHeader.addEventListener('click', () => {
+        for (const tabHeader of tabHeaders) {
+          tabHeader.classList.remove('selected');
+        }
+        tabHeader.classList.add('selected');
+        for (const tab of tabs) {
+          tab.classList.remove('active');
+        }
+        const tab = tabBlock.querySelector(`[data-tab-id="${tabRef}"]`);
+        if (tab) {
+          tab.classList.add('active');
+        }
+      });
+    }
+  }
+};
+
+// Run all logic on DOM load
+
+document.addEventListener('DOMContentLoaded', () => {
+  initialiseTabs();
+});
