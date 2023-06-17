@@ -229,13 +229,17 @@ section {
   text-align: center;
   width: 85vw;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 1rem;
-  padding: 3rem 0;
+
   @media (max-width: 991px) {
     width: 90vw;
   }
+}
+
+section:not(.hero) {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  padding: 3rem 0;
 }
 
 section.hide {

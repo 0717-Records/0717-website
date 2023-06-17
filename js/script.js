@@ -40,7 +40,8 @@ const initialiseTabs = () => {
 
     for (const tabHeader of tabHeaders) {
       const tabRef = tabHeader.dataset.tabRef;
-      tabHeader.addEventListener('click', () => {
+      tabHeader.addEventListener('click', (e) => {
+        e.preventDefault();
         for (const tabHeader of tabHeaders) {
           tabHeader.classList.remove('selected');
         }
