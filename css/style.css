@@ -350,7 +350,6 @@ section h2 {
     padding: 0;
   }
   @media (max-width: 767px) {
-    margin-top: 1rem;
     column-gap: 1rem;
     row-gap: 0.5rem;
   }
@@ -361,4 +360,12 @@ section h2 {
   @media (max-width: 767px) {
     width: 2rem;
   }
+}
+
+.section--escape .artist-block.last-item .artist-img-frame {
+  background-color: var(--primary-yellow);
+}
+
+.section--escape .artist-block.last-item .email-block {
+  margin-top: 1rem;
 }
