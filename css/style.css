@@ -147,12 +147,14 @@ button:active {
 /* MAIN STYLES */
 
 main {
-  @media (max-width: 767px) {
-    padding: 0 1.5rem;
-  }
+  padding: 0 1.5rem;
 }
 
 /* HERO */
+
+.hero h1 {
+  font-size: 0;
+}
 
 .hero {
   height: 100vh;
