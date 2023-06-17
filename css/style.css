@@ -468,3 +468,22 @@ section .section--subheading {
     height: 3rem;
   }
 }
+
+/* DISCOVER */
+
+.section--discover .vision-statement {
+  max-width: 55rem;
+  margin: 0 2rem 2rem;
+  @media (max-width: 767px) {
+    max-width: none;
+  }
+}
+
+.section--discover .mission-statement {
+  max-width: 50rem;
+  margin: 0 2rem 3rem;
+  @media (max-width: 767px) {
+    max-width: none;
+    margin-bottom: 2rem;
+  }
+}
