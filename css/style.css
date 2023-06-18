@@ -379,11 +379,14 @@ header nav .nav-link {
   transition: all 0.2s ease;
 }
 
-header nav .nav-link:hover {
-  background-color: var(--primary-yellow-dim);
-  color: black;
-  text-shadow: none;
+@media (hover: hover) {
+  header nav .nav-link:hover {
+    background-color: var(--primary-yellow-dim);
+    color: black;
+    text-shadow: none;
+  }
 }
+
 header nav .nav-link:active {
   color: white;
   background-color: rgba(0, 0, 0, 0.25);
@@ -402,12 +405,10 @@ header nav .nav-logo {
   transition: all 0.2s ease;
 }
 
-header nav .nav-logo:hover {
-  /* background: url(/img/logo-small-black.webp);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; */
-  background-color: rgba(0, 0, 0, 0.25);
+@media (hover: hover) {
+  header nav .nav-logo:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
 }
 
 header nav .nav-logo:active {
