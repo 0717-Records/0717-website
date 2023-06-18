@@ -668,18 +668,17 @@ dialog {
   border-radius: 4rem;
   background: linear-gradient(139.07deg, #d0d0d0 1.27%, rgba(242, 241, 241) 101.53%);
   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 dialog .dialog-container {
+  /* width: 35rem; */
+  min-height: 50vh;
+  max-width: 80vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 3rem 4rem;
+  margin: 3rem 2rem;
   @media (max-width: 767px) {
     margin: 2rem 1rem;
   }
