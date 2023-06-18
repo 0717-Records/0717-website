@@ -323,7 +323,7 @@ header nav .nav-link {
   justify-content: center;
   align-items: center;
   color: white;
-  background: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.25);
   border-radius: 32px;
   font-weight: 700;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
@@ -332,15 +332,52 @@ header nav .nav-link {
   @media (max-width: 767px) {
     width: 6.5rem;
   }
+  transition: all 0.2s ease;
+}
+
+header nav .nav-link:hover {
+  background-color: var(--primary-yellow-dim);
+  color: black;
+  text-shadow: none;
+}
+header nav .nav-link:active {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 header nav .nav-logo {
   width: 6rem;
+  height: 6rem;
   display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  background: url(/img/logo-small-black.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 0.2s ease;
+}
+
+header nav .nav-logo:hover {
+  /* background: url(/img/logo-small-black.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; */
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+header nav .nav-logo:active {
+  background-color: transparent;
 }
 
 header nav .nav-logo img {
-  width: 100%;
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 /* HERO */
@@ -357,6 +394,7 @@ header nav .nav-logo img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   max-width: 35rem;
   max-height: 50vh;
+  margin-top: 3rem;
   margin-bottom: 3rem;
   @media (max-width: 991px) {
     max-width: 25rem;
