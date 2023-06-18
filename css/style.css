@@ -325,23 +325,19 @@ section .section--subheading {
   cursor: pointer;
 }
 
-.section--escape .artist-img-frame {
+.section--escape .artist-block .artist-img-frame {
   width: 10rem;
   height: 10rem;
   overflow: hidden;
   border-radius: 50%;
   margin-bottom: 1rem;
   position: relative;
-  border: 0.5rem solid transparent;
+  transition: all 0.2s ease;
   @media (max-width: 767px) {
     max-width: 8rem;
     max-height: 8rem;
     margin-bottom: 1rem;
   }
-}
-
-.section--escape .artist-block:hover .artist-img-frame {
-  border-color: var(--primary-yellow);
 }
 
 .section--escape .artist-img-frame img {
@@ -355,6 +351,15 @@ section .section--subheading {
 
 .section--escape .artist-block h4 {
   padding: 0 1rem;
+}
+
+.section--escape .artist-block:not(.placeholder):hover .artist-img-frame {
+  box-shadow: 9px 6px 12px 1px rgba(0, 0, 0, 0.25);
+  transform: scale(1.01);
+}
+
+.section--escape .artist-block:not(.placeholder):hover h4 {
+  color: var(--primary-yellow-dim);
 }
 
 .section--escape .artist-block .description,
@@ -402,6 +407,7 @@ section .section--subheading {
   width: 25rem;
   aspect-ratio: 210 / 297;
   overflow: hidden;
+  transition: all 0.2s ease;
   @media (max-width: 767px) {
     width: 70vw;
   }
@@ -420,6 +426,11 @@ section .section--subheading {
   left: 0;
   top: 0;
   object-fit: cover;
+}
+
+.section--engage .tour-block:not(.placeholder):hover {
+  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25);
+  transform: scale(1.01);
 }
 
 .section--engage .tour-block.placeholder {
