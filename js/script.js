@@ -58,8 +58,38 @@ const initialiseTabs = () => {
   }
 };
 
+// Modals
+
+const initialiseModals = () => {
+  const artistBlocks = document.querySelectorAll('.artist-block:not(.last-item)');
+  const closeButton = document.querySelector('[data-close-modal]');
+  const modal = document.querySelector('[data-modal]');
+
+  for (const artistBlock of artistBlocks) {
+    artistBlock.addEventListener('click', () => {
+      modal.showModal();
+    });
+    closeButton.addEventListener('click', () => {
+      modal.close();
+    });
+  }
+
+  modal.addEventListener('click', (e) => {
+    const dialogDimensions = modal.getBoundingClientRect();
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      modal.close();
+    }
+  });
+};
+
 // Run all logic on DOM load
 
 document.addEventListener('DOMContentLoaded', () => {
   initialiseTabs();
+  initialiseModals();
 });
