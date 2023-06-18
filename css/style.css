@@ -4,7 +4,7 @@
   --primary-yellow-dark: #535026;
   --primary-yellow-dim: #d6ca26;
   --primary-yellow-light: #fffccd;
-  --primary-white: #fcfbf2;
+  --primary-white: white;
 }
 
 html {
@@ -239,7 +239,7 @@ section {
   }
 }
 
-section:not(.hero) {
+section:not(.section--hero) {
   background: rgba(255, 255, 255, 0.4);
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
   border-radius: 1rem;
@@ -267,15 +267,15 @@ section .section--subheading {
 
 /* HERO */
 
-.hero h1 {
+.section--hero h1 {
   font-size: 0;
 }
 
-.hero {
+.section--hero {
   height: 100vh;
 }
 
-.hero .logo-large {
+.section--hero .logo-large {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   max-width: 35rem;
   max-height: 50vh;
@@ -288,7 +288,7 @@ section .section--subheading {
   }
 }
 
-.hero .hero--intro {
+.section--hero .hero--intro {
   max-width: 66rem;
 }
 
