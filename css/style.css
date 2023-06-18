@@ -671,7 +671,6 @@ dialog {
 }
 
 dialog .dialog-container {
-  /* width: 35rem; */
   min-height: 50vh;
   max-width: 80vw;
   display: flex;
@@ -737,12 +736,12 @@ dialog .socials-wrapper .social-item {
 
 dialog button[data-close-modal] {
   position: absolute;
-  background-color: transparent;
-  width: 1.5rem;
-  height: 1.5rem;
   top: 2.5rem;
   right: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   padding: 0;
+  /* background-color: transparent; */
   color: black;
 }
 
