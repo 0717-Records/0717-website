@@ -734,7 +734,7 @@ dialog .socials-wrapper .social-item {
   }
 }
 
-dialog button[data-close-modal] {
+dialog [data-close-modal] {
   position: absolute;
   top: 2.5rem;
   right: 2.5rem;
@@ -745,7 +745,7 @@ dialog button[data-close-modal] {
   color: black;
 }
 
-dialog button[data-close-modal]:hover {
+dialog [data-close-modal]:hover {
   color: var(--primary-yellow-dim);
 }
 
