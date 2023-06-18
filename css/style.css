@@ -338,7 +338,6 @@ header .header-blur {
   left: 50%;
   transform: translateX(-50%);
   top: -725px;
-  background-color: rgba(254, 245, 103, 0.04);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 50%;
