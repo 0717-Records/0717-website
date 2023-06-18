@@ -662,6 +662,7 @@ dialog::backdrop {
 
 dialog {
   width: 35rem;
+  min-height: 50vh;
   max-width: 80vw;
   border: none;
   border-radius: 4rem;
