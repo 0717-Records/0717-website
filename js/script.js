@@ -26,7 +26,7 @@ for (const button of copyToClipboardButtons) {
   });
 }
 
-// ESCAPE - tab logic
+// TAB LOGIC
 
 const initialiseTabs = () => {
   const tabbedContent = document.querySelectorAll('.tabbed-content');
@@ -61,18 +61,53 @@ const initialiseTabs = () => {
 // Modals
 
 const initialiseModals = () => {
-  const artistBlocks = document.querySelectorAll('.artist-block:not(.last-item)');
+  const artistBlocks = document.querySelectorAll('.artist-block:not(.placeholder)');
   const closeButton = document.querySelector('[data-close-modal]');
   const modal = document.querySelector('[data-modal]');
 
   for (const artistBlock of artistBlocks) {
     artistBlock.addEventListener('click', () => {
-      modal.showModal();
+      populateModalContent({
+        image: artistBlock.querySelector('.artist-img-frame img')?.cloneNode(true),
+        title: artistBlock.querySelector('h4')?.cloneNode(true),
+        description: artistBlock.querySelector('.description')?.cloneNode(true),
+        socials: artistBlock.querySelector('.socials-wrapper')?.cloneNode(true),
+      });
+      openModal();
     });
     closeButton.addEventListener('click', () => {
-      modal.close();
+      closeModal();
     });
   }
+
+  const openModal = () => {
+    modal.showModal();
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    modal.close();
+    document.body.style.overflow = 'auto';
+  };
+
+  const populateModalContent = ({ image, title, description, socials }) => {
+    const modalImage = modal.querySelector('.img-frame img');
+    const modalTitle = modal.querySelector('h4');
+    const modalDescr = modal.querySelector('.description');
+    const modalSocials = modal.querySelector('.socials-wrapper');
+
+    // clear current contents
+    modalImage.src = '';
+    modalImage.alt = '';
+    modalTitle.textContent = '';
+    modalDescr.textContent = '';
+    modalSocials.textContent = '';
+
+    if (image) modalImage.parentNode.replaceChild(image, modalImage);
+    if (title) modalTitle.parentNode.replaceChild(title, modalTitle);
+    if (description) modalDescr.parentNode.replaceChild(description, modalDescr);
+    if (socials) modalSocials.parentNode.replaceChild(socials, modalSocials);
+  };
 
   modal.addEventListener('click', (e) => {
     const dialogDimensions = modal.getBoundingClientRect();
@@ -82,7 +117,7 @@ const initialiseModals = () => {
       e.clientY < dialogDimensions.top ||
       e.clientY > dialogDimensions.bottom
     ) {
-      modal.close();
+      closeModal();
     }
   });
 };

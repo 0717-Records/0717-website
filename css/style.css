@@ -222,13 +222,6 @@ button:active {
   }
 }
 
-/* MODAL */
-
-dialog::backdrop {
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
-}
-
 /* MAIN STYLES */
 
 section {
@@ -328,6 +321,10 @@ section .section--subheading {
   }
 }
 
+.section--escape .artist-block:not(.placeholder):hover {
+  cursor: pointer;
+}
+
 .section--escape .artist-img-frame {
   width: 10rem;
   height: 10rem;
@@ -335,11 +332,16 @@ section .section--subheading {
   border-radius: 50%;
   margin-bottom: 1rem;
   position: relative;
+  border: 0.5rem solid transparent;
   @media (max-width: 767px) {
     max-width: 8rem;
     max-height: 8rem;
     margin-bottom: 1rem;
   }
+}
+
+.section--escape .artist-block:hover .artist-img-frame {
+  border-color: var(--primary-yellow);
 }
 
 .section--escape .artist-img-frame img {
@@ -355,44 +357,25 @@ section .section--subheading {
   padding: 0 1rem;
 }
 
+.section--escape .artist-block .description,
 .section--escape .artist-block .socials-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-  padding: 0 1rem;
-  column-gap: 1.5rem;
-  row-gap: 1rem;
-  @media (max-width: 991px) {
-    padding: 0;
-  }
-  @media (max-width: 767px) {
-    column-gap: 1rem;
-    row-gap: 0.5rem;
-  }
+  display: none;
 }
 
-.section--escape .artist-block .socials-wrapper .social-item {
-  width: 3rem;
-  @media (max-width: 767px) {
-    width: 2rem;
-  }
-}
-
-.section--escape .artist-block.last-item .artist-img-frame {
+.section--escape .artist-block.placeholder .artist-img-frame {
   background-color: var(--primary-yellow);
 }
 
-.section--escape .artist-block.last-item .email-block {
+.section--escape .artist-block.placeholder .email-block {
   margin-top: 1rem;
 }
 
 @media (max-width: 767px) {
-  .section--escape .artist-block.last-item .email-block a {
+  .section--escape .artist-block.placeholder .email-block a {
     font-size: 0.8rem;
   }
 
-  .section--escape .artist-block.last-item .email-block button {
+  .section--escape .artist-block.placeholder .email-block button {
     font-size: 0.8rem;
     padding: 0.5rem;
   }
@@ -439,7 +422,7 @@ section .section--subheading {
   object-fit: cover;
 }
 
-.section--engage .tour-block.last-item {
+.section--engage .tour-block.placeholder {
   background-color: var(--primary-yellow);
   display: flex;
   flex-direction: column;
@@ -447,11 +430,11 @@ section .section--subheading {
   align-items: center;
 }
 
-.section--engage .tour-block.last-item img {
+.section--engage .tour-block.placeholder img {
   width: 50%;
 }
 
-.section--engage .tour-block.last-item h4 {
+.section--engage .tour-block.placeholder h4 {
   margin: 2rem 0;
 }
 
@@ -493,4 +476,98 @@ section .section--subheading {
     max-width: none;
     margin-bottom: 2rem;
   }
+}
+
+/* MODAL */
+
+dialog::backdrop {
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+dialog {
+  width: 35rem;
+  max-width: 80vw;
+  border: none;
+  border-radius: 4rem;
+  background: linear-gradient(139.07deg, #d0d0d0 1.27%, rgba(242, 241, 241) 101.53%);
+  box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.25);
+}
+
+dialog .dialog-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 4rem;
+  @media (max-width: 767px) {
+    margin: 2rem 1rem;
+  }
+}
+
+dialog .img-frame {
+  width: 12rem;
+  height: 12rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  position: relative;
+  @media (max-width: 767px) {
+    max-width: 8rem;
+    max-height: 8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+dialog .img-frame img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
+
+dialog h4 {
+  margin-bottom: 1rem;
+}
+
+dialog .socials-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+  @media (max-width: 991px) {
+    padding: 0;
+  }
+  @media (max-width: 767px) {
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+  }
+}
+
+dialog .socials-wrapper .social-item {
+  width: 3rem;
+  @media (max-width: 767px) {
+    width: 2.5rem;
+  }
+}
+
+dialog button[data-close-modal] {
+  position: absolute;
+  background-color: transparent;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 2.5rem;
+  right: 2.5rem;
+  padding: 0;
+  color: black;
+}
+
+dialog button[data-close-modal]:hover {
+  color: var(--primary-yellow-dim);
 }
