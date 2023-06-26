@@ -587,19 +587,28 @@ header nav .nav-logo img {
   margin: 2rem 0;
 }
 
-.section--connect .socials-wrapper {
+/* DISCOVER */
+
+.section--discover .welcome {
+  margin-bottom: 1.5rem;
+}
+
+.section--discover .socials-wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   column-gap: 2rem;
   row-gap: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
   @media (max-width: 767px) {
     column-gap: 1rem;
     row-gap: 1rem;
+    /* padding: 0; */
   }
 }
 
-.section--connect .socials-wrapper .social-item {
+.section--discover .socials-wrapper .social-item {
   width: 5rem;
   height: 5rem;
   @media (max-width: 767px) {
@@ -608,9 +617,7 @@ header nav .nav-logo img {
   }
 }
 
-/* DISCOVER */
-
-.section--discover .vision-statement {
+.section--discover .statement {
   max-width: 55rem;
   margin: 0 2rem 2rem;
   @media (max-width: 767px) {
@@ -618,13 +625,9 @@ header nav .nav-logo img {
   }
 }
 
-.section--discover .mission-statement {
-  max-width: 50rem;
-  margin: 0 2rem 3rem;
-  @media (max-width: 767px) {
-    max-width: none;
-    margin-bottom: 2rem;
-  }
+.section--discover .statement h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 /* MODAL */
