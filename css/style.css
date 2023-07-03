@@ -418,6 +418,47 @@ header nav .nav-logo img {
   object-fit: cover;
 }
 
+/* HERO FEATURED */
+
+.section--hero.featured {
+  height: 100vh;
+}
+
+.section--hero .feature-poster-wrapper {
+  margin-top: 7rem;
+  width: 90vw;
+  max-width: 50rem;
+  max-height: 70vh;
+  aspect-ratio: 210 / 297;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.section--hero .feature-poster {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.section--hero .feature-poster img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: contain;
+}
+
+.section--hero .feature-buttons {
+  display: flex;
+  margin-top: 1rem;
+  column-gap: 1rem;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+
 /* HERO */
 
 .section--hero h1 {
@@ -425,7 +466,7 @@ header nav .nav-logo img {
 }
 
 .section--hero {
-  height: 100vh;
+  height: 60vh;
 }
 
 .section--hero .logo-large {
