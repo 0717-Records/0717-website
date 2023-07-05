@@ -439,6 +439,7 @@ header nav .nav-logo img {
     margin-top: 4rem;
   }
   @media (max-width: 767px) {
+    margin-top: 2rem;
     max-height: 60vh;
   }
 }
