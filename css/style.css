@@ -72,7 +72,8 @@ a:hover {
   color: var(--primary-yellow-dark);
 }
 
-button {
+button,
+a.button {
   background-color: var(--primary-yellow-dark);
   border: none;
   color: var(--primary-white);
@@ -83,13 +84,15 @@ button {
   transition: all ease-in-out 0.1s;
 }
 
-button:hover {
+button:hover,
+a.button:hover {
   cursor: pointer;
   color: var(--primary-black);
   background-color: var(--primary-yellow-dim);
 }
 
-button:active {
+button:active,
+a.button:active {
   color: var(--primary-white);
   background-color: var(--primary-yellow-dark);
 }
@@ -426,19 +429,22 @@ header nav .nav-logo img {
 
 .section--hero .feature-poster-wrapper {
   margin-top: 7rem;
-  width: 90vw;
-  max-width: 50rem;
+  width: 100%;
+  max-width: 90vw;
   max-height: 70vh;
-  aspect-ratio: 210 / 297;
-  overflow: hidden;
   transition: all 0.2s ease;
+  @media (max-width: 991px) {
+    margin-top: 4rem;
+  }
 }
 
 .section--hero .feature-poster {
-  display: inline-block;
   position: relative;
-  width: 100%;
-  height: 100%;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  aspect-ratio: 210 / 297;
 }
 .section--hero .feature-poster img {
   width: 100%;
@@ -465,10 +471,6 @@ header nav .nav-logo img {
   font-size: 0;
 }
 
-.section--hero {
-  height: 60vh;
-}
-
 .section--hero .logo-large {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   max-width: 35rem;
@@ -480,10 +482,8 @@ header nav .nav-logo img {
   }
   @media (max-width: 767px) {
     width: 70vw;
-    margin-top: 0;
     max-width: none;
     max-height: none;
-    margin-bottom: 2rem;
   }
 }
 
