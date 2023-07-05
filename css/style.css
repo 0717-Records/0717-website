@@ -647,6 +647,12 @@ header nav .nav-logo img {
   margin: 2rem 0;
 }
 
+/* ENGAGE */
+
+.artists-wrapper.disable .artist-block {
+  pointer-events: none;
+}
+
 /* DISCOVER */
 
 .section--discover .welcome {
