@@ -323,8 +323,8 @@ section h2 {
 
 section .section--subheading {
   margin: 0 auto 3rem;
+  max-width: 85%;
   @media (max-width: 767px) {
-    max-width: 60vw;
     margin-bottom: 2rem;
   }
 }
