@@ -14,6 +14,7 @@ html {
   line-height: 1.1;
   font-weight: 400;
   scroll-behavior: smooth;
+  font-variant: small-caps;
 }
 
 body {
@@ -199,6 +200,7 @@ a.button:active {
 }
 .email-block a {
   font-family: 'Inconsolata', monospace;
+  font-variant: normal;
 }
 .email-block .copy-email-button {
   margin-top: 1rem;
