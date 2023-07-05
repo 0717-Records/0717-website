@@ -438,6 +438,9 @@ header nav .nav-logo img {
   @media (max-width: 991px) {
     margin-top: 4rem;
   }
+  @media (max-width: 767px) {
+    max-height: 60vh;
+  }
 }
 
 .section--hero .feature-poster {
