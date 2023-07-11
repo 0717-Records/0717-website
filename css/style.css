@@ -439,18 +439,13 @@ header nav .nav-logo img {
   justify-content: flex-start;
 }
 
-/* .featured-section-wrapper {
-  margin-top: 9rem;
-  height: calc(100vh - 9rem);
-  width: 100vw;
-
-  border: solid 5px red;
-} */
-
 .section--hero.featured .welcome {
   margin-top: 9rem;
   @media (max-width: 991px) {
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
+  }
+  @media (max-width: 767px) {
+    margin-top: 5rem;
   }
 }
 
