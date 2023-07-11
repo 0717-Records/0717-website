@@ -441,9 +441,6 @@ header nav .nav-logo img {
 
 .section--hero.featured .welcome {
   margin-top: 9rem;
-  @media (max-width: 991px) {
-    /* margin-top: 6rem; */
-  }
   @media (max-width: 767px) {
     margin-top: 5rem;
   }
@@ -454,6 +451,9 @@ header nav .nav-logo img {
   width: 100%;
   max-width: 90vw;
   max-height: calc(100vh - 17rem);
+  @media (max-width: 767px) {
+    max-height: calc(100vh - 18rem);
+  }
 }
 
 .section--hero .feature-poster {
