@@ -452,7 +452,7 @@ header nav .nav-logo img {
   max-width: 90vw;
   max-height: calc(100vh - 17rem);
   @media (max-width: 767px) {
-    max-height: calc(100vh - 18rem);
+    max-height: calc(100vh - 20rem);
   }
 }
 
