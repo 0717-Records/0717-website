@@ -37,6 +37,14 @@ p {
   }
 }
 
+.h-xl {
+  font-size: 2rem;
+  font-weight: 500;
+  @media (max-width: 767px) {
+    font-size: 1.5rem;
+  }
+}
+
 .h-m {
   font-size: 1.5rem;
   font-weight: 500;
