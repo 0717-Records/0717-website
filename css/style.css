@@ -436,20 +436,29 @@ header nav .nav-logo img {
 
 .section--hero.featured {
   height: 100vh;
+  justify-content: flex-start;
+}
+
+/* .featured-section-wrapper {
+  margin-top: 9rem;
+  height: calc(100vh - 9rem);
+  width: 100vw;
+
+  border: solid 5px red;
+} */
+
+.section--hero.featured .welcome {
+  margin-top: 9rem;
+  @media (max-width: 991px) {
+    margin-top: 6rem;
+  }
 }
 
 .section--hero .feature-poster-wrapper {
-  margin-top: 7rem;
+  margin-top: 1rem;
   width: 100%;
   max-width: 90vw;
-  max-height: 70vh;
-  @media (max-width: 991px) {
-    margin-top: 4rem;
-  }
-  @media (max-width: 767px) {
-    margin-top: 0;
-    max-height: 60vh;
-  }
+  max-height: calc(100vh - 17rem);
 }
 
 .section--hero .feature-poster {
@@ -473,7 +482,7 @@ header nav .nav-logo img {
   position: absolute;
   left: 0;
   top: 0;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .section--hero .feature-buttons {
