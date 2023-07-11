@@ -452,7 +452,7 @@ header nav .nav-logo img {
   max-width: 90vw;
   max-height: calc(100vh - 17rem);
   @media (max-width: 767px) {
-    max-height: calc(100vh - 20rem);
+    max-height: calc(100vh - 21rem);
   }
 }
 
@@ -467,7 +467,6 @@ header nav .nav-logo img {
 }
 
 .section--hero .feature-poster:hover {
-  /* box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25); */
   transform: scale(1.01);
 }
 
