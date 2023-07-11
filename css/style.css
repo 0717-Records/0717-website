@@ -477,7 +477,7 @@ header nav .nav-logo img {
   position: absolute;
   left: 0;
   top: 0;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .section--hero .feature-buttons {
