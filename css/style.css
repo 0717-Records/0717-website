@@ -508,6 +508,7 @@ header nav .nav-logo img {
     width: 70vw;
     max-width: none;
     max-height: none;
+    margin-top: 0;
   }
 }
 
