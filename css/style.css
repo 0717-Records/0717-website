@@ -188,6 +188,19 @@ a.button:active {
   }
 }
 
+/* IMAGES / IMAGE OVERLAYS */
+
+.img-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* .img-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} */
+
 /* SOCIALS */
 
 .socials-wrapper a {
@@ -455,6 +468,7 @@ header nav .nav-logo img {
   width: 100%;
   max-width: 90vw;
   max-height: calc(100vh - 17rem);
+  height: 100vh;
   @media (max-width: 767px) {
     max-height: calc(100vh - 21rem);
   }
@@ -464,9 +478,8 @@ header nav .nav-logo img {
   position: relative;
   display: block;
   max-width: 100%;
-  max-height: 100%;
+  height: 100%;
   margin: 0 auto;
-  aspect-ratio: 210 / 297;
   transition: all 0.2s ease;
 }
 
@@ -474,7 +487,7 @@ header nav .nav-logo img {
   transform: scale(1.01);
 }
 
-.section--hero .feature-poster img {
+.section--hero .feature-poster {
   width: 100%;
   height: 100%;
   position: absolute;
