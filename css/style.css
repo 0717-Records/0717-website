@@ -483,6 +483,11 @@ header nav .nav-logo img {
   justify-content: flex-start;
 }
 
+.section--hero.featured .img-link-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
 .section--hero.featured .welcome {
   margin-top: 9rem;
   @media (max-width: 767px) {
