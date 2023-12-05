@@ -480,6 +480,9 @@ header nav .nav-logo img {
 
 .welcome {
   text-align: center;
+  @media (max-width: 767px) {
+    margin: 2rem 0;
+  }
 }
 
 /* HERO FEATURED */
