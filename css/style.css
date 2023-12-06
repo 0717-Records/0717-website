@@ -352,10 +352,6 @@ section {
   }
 }
 
-.section-anchor.hero {
-  height: 5rem;
-}
-
 .section-anchor.last {
   height: 4rem;
 }
@@ -478,6 +474,15 @@ header nav .nav-logo img {
   top: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
+}
+
+/* WELCOME MESSAGE */
+
+.welcome {
+  text-align: center;
+  @media (max-width: 767px) {
+    margin: 2rem 0;
+  }
 }
 
 /* HERO FEATURED */
