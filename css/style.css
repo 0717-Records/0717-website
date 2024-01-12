@@ -351,6 +351,11 @@ section {
     height: 5rem;
   }
 }
+.section-anchor.home {
+  @media (max-width: 767px) {
+    height: 7rem;
+  }
+}
 
 .section-anchor.last {
   height: 4rem;
