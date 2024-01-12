@@ -538,6 +538,12 @@ header nav .nav-logo img {
 
 /* HERO */
 
+.section--hero {
+  @media (max-width: 767px) {
+    height: 80vh;
+  }
+}
+
 .section--hero h1 {
   font-size: 0;
 }
