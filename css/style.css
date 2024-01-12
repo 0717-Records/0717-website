@@ -493,7 +493,7 @@ header nav .nav-logo img {
 /* HERO FEATURED */
 
 .section--hero.featured {
-  min-height: 100vh;
+  min-height: 90vh;
   justify-content: flex-start;
 }
 
@@ -538,11 +538,11 @@ header nav .nav-logo img {
 
 /* HERO */
 
-.section--hero {
+/* .section--hero {
   @media (max-width: 767px) {
     height: 80vh;
   }
-}
+} */
 
 .section--hero h1 {
   font-size: 0;
